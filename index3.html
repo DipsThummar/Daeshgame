@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Game</title>
+
+   <style>
+   	body{
+   		background-color: black;
+   		color: white;
+   	}
+   </style>
+
+</head>
+<body>
+	dip=<span id="darshan">100</span><br>
+	shiv=<span id="satyam">100</span><br>
+	parth=<span id="piyush">100</span><br>
+	hardik=<span id="divyesh">100</span><br>
+	box=<span id="smit">0</span><br>
+	<br></br>
+
+ <div id="display"></div>
+	<button onclick="myfunction('dip')">dip</button>
+	<button onclick="myfunction('shiv')">shiv</button>
+	<button onclick="myfunction('parth')">parth</button>
+	<button onclick="myfunction('hardik')">hardik</button>
+ <script>
+	var dip = 100;
+	var shiv = 100;
+	var parth = 100;
+	var hardik = 100;
+	var box = 0;
+	
+  function myfunction(user) {
+
+  	  var random = Math.floor(Math.random() * 10); 
+
+     document.getElementById('display').innerHTML = random;
+    
+     if (user == 'dip') {
+
+        dip = dip - 10;
+        box = box + 10;
+
+         if (random > 5) {
+            dip = box + dip;
+            box = 0;
+            alert("dip is win");
+         } else {
+            alert("dip is lose");
+         }
+        document.getElementById('darshan').innerHTML = dip;
+        document.getElementById('smit').innerHTML = box;
+      }
+
+      if (user == 'shiv') {
+
+         shiv = shiv - 10;
+         box = box + 10;
+
+         if (random > 5) {
+            shiv=box+shiv;
+            box= 0;
+            alert("shiv is win");
+         } 
+         else {
+            alert("shiv is lose");
+         }
+         document.getElementById('satyam').innerHTML= shiv;
+         document.getElementById('smit').innerHTML = box;
+      } 
+
+      if (user == 'parth') {
+         parth = parth - 10;
+         box = box + 10;
+
+         if (random > 5) {
+           parth = box + parth;
+           box = 0;
+           alert("parth is win");
+         } 
+         else {
+            alert("parth is lose");
+         }
+         document.getElementById('piyush').innerHTML = parth;
+         document.getElementById('smit').innerHTML = box;
+      } 
+
+      if (user == 'hardik') {
+         hardik = hardik - 10;
+         box = box + 10;
+
+         if (random > 5) {
+           hardik = box + hardik;
+           box = 0;
+           alert("hardik is win");
+         } 
+         else {
+            alert("hardik is lose");
+         }
+         document.getElementById('divyesh').innerHTML = hardik;
+         document.getElementById('smit').innerHTML = box;
+      } 
+   }    
+</script>
+</body>
+</html>
